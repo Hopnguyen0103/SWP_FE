@@ -9,11 +9,7 @@ import { Paper } from "@mui/material";
 import OrderTabItem from "./OrderTabItem";
 import { OrderAndOrderItem, OrderStatus } from "../../../package/model/order";
 
-const StyledTab = styled(Tab)({
-  fontWeight: 1000,
-  color: "black",
-  width: "20%",
-});
+
 
 
 export default function OrderTab({ orderStatusList, data }: {
