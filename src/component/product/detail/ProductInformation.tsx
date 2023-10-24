@@ -51,8 +51,7 @@ export default function ProductInformation({ product }: {product: Product}) {
           <StyledTab label="Đánh giá" value="2" />
         </TabList>
       </Box>
-      <TabPanel value="1">Bạn có thắc mắc gì hay muốn hỏi thêm thông tin về sản phẩm 
-      hãy liên hệ số điện thoại 0123.456.789 và để biết thêm nhiều thông tin về các chương trình của Hommie.</TabPanel>
+      <TabPanel value="1">.</TabPanel>
       <TabPanel value="2">
         {feedbackList !== null ? <FeedbackTable feedbackList={feedbackList} /> : <Dialog open={true}/>}
         {user != undefined || user != null? <FeedbackCreateForm userId={user?.userId} productId={product.productId}/> : <p style={{color: "red"}}>* Cần đăng nhập đề gửi đánh giá về các sản phẩm</p>}

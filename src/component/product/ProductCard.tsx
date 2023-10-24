@@ -66,7 +66,7 @@ export default function ProductCard({product}: Props) {
       }
     }
   };
-  if (product.status === "xóa") {
+  if (product.status === 1) {
     return null
   } else {
     return (
