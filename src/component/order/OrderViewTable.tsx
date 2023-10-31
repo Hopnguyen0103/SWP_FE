@@ -180,7 +180,7 @@ const OrderViewTable = ({
               color: setup.border
             }}
           >
-            {formatNumber(total)}
+            {formatNumber(total)} VNĐ
           </span>
         </StyledText>
       </div>

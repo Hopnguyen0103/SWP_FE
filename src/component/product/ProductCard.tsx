@@ -72,7 +72,7 @@ export default function ProductCard({product}: Props) {
     return (
       <Card
         sx={{
-          maxWidth: 345,
+          maxWidth: 360,
           borderRadius: "1rem",
           // boxShadow: "none",
         }}

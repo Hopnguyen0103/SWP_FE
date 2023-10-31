@@ -22,7 +22,7 @@ export default function ProductDetail({ product }: any) {
       dispatch(
         setOpen({
           open: true,
-          message: "You must login to buy",
+          message: "Hãy đăng nhập để thêm vào giỏ hàng nhé!",
           severity: "error",
         })
       );
@@ -111,7 +111,7 @@ export default function ProductDetail({ product }: any) {
             color: "white",
           }}
         >
-          {product.quantity > 0 ? "Add to Cart " : "Out of Stock"}
+          {product.quantity > 0 ? "Thêm vào giỏ hàng" : "Hết hàng"}
         </StyledLoadingButton>
       </div>
     </>
