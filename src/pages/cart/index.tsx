@@ -140,7 +140,9 @@ export default function Cart() {
           <Box sx={{ flexGrow: 1 }} />
           <Typography variant="body1">
             Tổng tiền thanh toán:
-            
+            <span style={{ marginLeft: "1rem", marginRight: "5rem" }}>
+              {formatNumber(total)} VNĐ
+            </span>
           </Typography>
           <Button
             sx={{

@@ -102,7 +102,7 @@ export default function CartTable({
                     textAlign: "center",
                   }}
                 >
-                  {row.product.price}
+                  {formatNumber(row.product.price)}
                 </Typography>
               </TableCell>
               <TableCell align="center">
