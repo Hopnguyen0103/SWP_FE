@@ -121,8 +121,8 @@ export default function Cart() {
           <CartTable
             cart={data?.data}
             handleDelete={handleDelete}
-            setOrderList={setOrderList}
             orderList={orderList}
+            setOrderList={setOrderList}
             updateCartItemsQuantity={updateCartItemsQuantity}
           />
         </Paper>
@@ -146,7 +146,7 @@ export default function Cart() {
           </Typography>
           <Button
             sx={{
-              height: "4rem",
+              height: "5rem",
             }}
             color="success"
             variant="contained"
