@@ -9,7 +9,7 @@ export default function ProductSkeleton() {
       sx={{
         maxWidth: 345,
         borderRadius: "1rem",
-        // boxShadow: "none",
+        boxShadow: "none",
       }}
     >
       <Skeleton width="100%" height="16rem" />

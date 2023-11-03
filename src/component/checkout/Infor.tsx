@@ -17,7 +17,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 variant="h5"
                 sx={{
                     marginBottom: "1rem",
-                    fontWeight: "700",
+                    fontWeight: "650",
                 }}
             >
                 Thông tin đơn hàng
@@ -30,7 +30,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -38,7 +38,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 </Typography>
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -53,7 +53,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -61,7 +61,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 </Typography>
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -79,7 +79,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -87,7 +87,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 </Typography>
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -106,7 +106,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "white",
                     }}
                 >
