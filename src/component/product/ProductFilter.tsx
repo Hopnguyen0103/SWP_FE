@@ -75,7 +75,7 @@ export default function ProductFilter({
         <Typography
           variant="h6"
           sx={{
-            fontWeight: "500",
+            fontWeight: "600",
           }}
         >
           Giá tiền
@@ -104,7 +104,7 @@ export default function ProductFilter({
         <Typography
           variant="h6"
           sx={{
-            fontWeight: "500",
+            fontWeight: "600",
           }}
         >
           Trạng thái

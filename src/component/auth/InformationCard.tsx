@@ -73,7 +73,7 @@ export default function InformationCard() {
       <AddressCard setAddress={setAddress} />
       <StyledOutlinedInput
         id="5"
-        label="Số nhà tên đường"
+        label="Địa chỉ "
         error={errors.address !== undefined}
         helperText={errors.address !== undefined ? "bắt buộc" : ""}
         {...register("address", { required: true })}
