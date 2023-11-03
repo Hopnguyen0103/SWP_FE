@@ -59,13 +59,13 @@ export default function OrderTable({
               <StyledTableHead>Mã</StyledTableHead>
             </TableCell>
             <TableCell>
-              <StyledTableHead>Ngày đặt hàng</StyledTableHead>
+              <StyledTableHead>Phương thức thanh toán</StyledTableHead>
             </TableCell>
             <TableCell>
               <StyledTableHead>Tổng giá</StyledTableHead>
             </TableCell>
             <TableCell>
-              <StyledTableHead>Phương thức thanh toán</StyledTableHead>
+              <StyledTableHead>Ngày đặt hàng</StyledTableHead>
             </TableCell>
             <TableCell>
               <StyledTableHead>Chi tiết</StyledTableHead>
