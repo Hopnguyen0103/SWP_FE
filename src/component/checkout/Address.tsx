@@ -35,15 +35,12 @@ export default function CheckoutAddress({
         >
           <div>
             <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
+            
             >
               <Typography
                 sx={{
                   padding: "0rem 1rem 0rem 0rem",
-                  fontWeight: "700",
+                  fontWeight: "500",
                 }}
               >
                 {userBackend.userName}
