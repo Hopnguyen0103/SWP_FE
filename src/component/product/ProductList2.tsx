@@ -16,7 +16,23 @@ export default function ProductList2({ productList, row, col }: Props) {
   }, [productList]);
   return (
     <>
-      
+      <Grid
+        container
+        spacing={2}
+        sx={{
+          marginBottom: "1rem",
+        }}
+      >
+ 
+        {productList
+          .filter((product: Product) => product.status !== 4)
+          .slice(0 + (page - 1) * (row * col), page * (row * col))
+          .map((product: any, key: any) => (
+            <Grid item xs={12/col} key={key}>
+              <ProductCard product={product} />
+            </Grid>
+          ))}
+          </Grid>
        <Pagination
         count={Math.floor(productList.length / 9) + 1}
         page={page}
@@ -45,21 +61,6 @@ export default function ProductList2({ productList, row, col }: Props) {
         shape="rounded"
         color="primary"
       />
-      <Grid
-        container
-        spacing={2}
-        sx={{
-          marginBottom: "1rem",
-        }}
-      >
-        {productList
-          .filter((product: Product) => product.status !== 4)
-          .slice(0 + (page - 1) * (row * col), page * (row * col))
-          .map((product: any, key: any) => (
-            <Grid item xs={12/col} key={key}>
-              <ProductCard product={product} />
-            </Grid>
-          ))}
       </Grid> 
     </>
   );
