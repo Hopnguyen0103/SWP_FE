@@ -111,6 +111,12 @@ export default function ProductCard({product}: Props) {
               justifyContent: "space-between"
             }}
           >
+            </Typography>
+            <LoadingIconButton
+              loading={isLoading}
+              size="large"
+              onClick={handleAddtoCart}
+            ></LoadingIconButton>
             <Typography
               variant="body1"
               sx={{
@@ -119,12 +125,7 @@ export default function ProductCard({product}: Props) {
               }}
             >
               {formatNumber(product.price)} VND
-            </Typography>
-            <LoadingIconButton
-              loading={isLoading}
-              size="large"
-              onClick={handleAddtoCart}
-            >
+            
               <AddShoppingCartIcon />
             </LoadingIconButton>
           </CardActions>
