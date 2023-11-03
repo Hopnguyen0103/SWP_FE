@@ -54,7 +54,7 @@ export default function ProductInformation({ product }: {product: Product}) {
       <TabPanel value="1">.</TabPanel>
       <TabPanel value="2">
         {feedbackList !== null ? <FeedbackTable feedbackList={feedbackList} /> : <Dialog open={true}/>}
-        {user != undefined || user != null? <FeedbackCreateForm userId={user?.userId} productId={product.productId}/> : <p style={{color: "red"}}>* Cần đăng nhập đề gửi đánh giá về các sản phẩm</p>}
+        {user != undefined || user != null? <FeedbackCreateForm userId={user?.userId} productId={product.productId}/> : <p style={{color: "red"}}>* Cần đăng nhập đề gửi đánh giá về các sản phẩm cho admin</p>}
       </TabPanel>
     </TabContext>
   );

@@ -21,9 +21,9 @@ export default function ProductDetail({ product }: any) {
     if (auth.currentUser === null) {
       dispatch(
         setOpen({
+          severity: "error",
           open: true,
           message: "You must login to buy",
-          severity: "error",
         })
       );
     } else {
@@ -31,9 +31,9 @@ export default function ProductDetail({ product }: any) {
         setIsLoading(true)
 
         const response : ResponseBody<CartAndCartItemAndProduct> = await UseAddToCart({
+          auth: auth.currentUser?.uid
           productId: product?.productId,
           cartId: cart?.cart.cartId,
-          auth: auth.currentUser?.uid
         })
         dispatch(
           setOpen({
@@ -96,8 +96,8 @@ export default function ProductDetail({ product }: any) {
         }}
       >
         <StyledLoadingButton
-          loading={isLoading}
           variant="contained"
+          loading={isLoading}
           disabled={product.quantity > 0 ? false : true}
           onClick={() => handleAddtoCart()}
           sx={{
