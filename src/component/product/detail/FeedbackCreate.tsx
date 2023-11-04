@@ -80,9 +80,9 @@ export default function FeedbackCreateForm({ productId, userId}: any ){
                       }}
                       maxLength={200}
                       minLength={10}
+                      size="small"
                       type="text"
                       color="secondary"
-                      size="small"
                       id="nội dung"
                       defaultValue={content}
                     {...register("content", { required: true, })}/>

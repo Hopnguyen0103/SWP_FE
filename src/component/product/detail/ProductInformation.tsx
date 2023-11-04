@@ -19,9 +19,9 @@ const StyledTab = styled(Tab)({
   color: "black"
 });
 export default function ProductInformation({ product }: {product: Product}) {
+  const [user, setUser] = useState<User | null>(null)
   const [value, setValue] = React.useState("1");
   const [feedbackList, setFeedbackList] = useState(null)
-  const [user, setUser] = useState<User | null>(null)
   const uid = auth.currentUser?.uid
   useEffect(() => {
       const getUser = async () => {
@@ -47,14 +47,14 @@ export default function ProductInformation({ product }: {product: Product}) {
     <TabContext value={value}>
       <Box marginTop={5}>
         <TabList onChange={handleChange}>
+        <StyledTab label="Đánh giá" value="2" />
           <StyledTab label="Chi tiết" value="1" />
-          <StyledTab label="Đánh giá" value="2" />
         </TabList>
       </Box>
       <TabPanel value="1">.</TabPanel>
       <TabPanel value="2">
         {feedbackList !== null ? <FeedbackTable feedbackList={feedbackList} /> : <Dialog open={true}/>}
-        {user != undefined || user != null? <FeedbackCreateForm userId={user?.userId} productId={product.productId}/> : <p style={{color: "red"}}>* Cần đăng nhập đề gửi đánh giá về các sản phẩm</p>}
+        {user != undefined || user != null? <FeedbackCreateForm userId={user?.userId} productId={product.productId}/> : <p style={{color: "red"}}>* Cần đăng nhập đề gửi đánh giá về các sản phẩm cho admin</p>}
       </TabPanel>
     </TabContext>
   );
