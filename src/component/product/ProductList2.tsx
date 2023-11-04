@@ -20,10 +20,9 @@ export default function ProductList2({ productList, row, col }: Props) {
         container
         spacing={2}
         sx={{
-          marginBottom: "1rem",
+          marginBottom: "2rem",
         }}
       >
- 
         {productList
           .filter((product: Product) => product.status !== 4)
           .slice(0 + (page - 1) * (row * col), page * (row * col))
@@ -32,7 +31,7 @@ export default function ProductList2({ productList, row, col }: Props) {
               <ProductCard product={product} />
             </Grid>
           ))}
-          </Grid>
+      </Grid> 
        <Pagination
         count={Math.floor(productList.length / 9) + 1}
         page={page}
@@ -44,8 +43,8 @@ export default function ProductList2({ productList, row, col }: Props) {
           });
         }}
         sx={{
+          marginTop: "2rem",
           float: "right",
-          marginTop: "1rem",
           "& .MuiButtonBase-root": {
             color: "red",
           },
@@ -61,7 +60,6 @@ export default function ProductList2({ productList, row, col }: Props) {
         shape="rounded"
         color="primary"
       />
-      </Grid> 
     </>
   );
 }
