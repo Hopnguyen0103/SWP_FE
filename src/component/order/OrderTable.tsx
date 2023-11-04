@@ -56,7 +56,7 @@ export default function OrderTable({
         <TableHead>
           <TableRow>
             <TableCell>
-              <StyledTableHead>Mã</StyledTableHead>
+              <StyledTableHead>Mã Đơn Hàng</StyledTableHead>
             </TableCell>
             <TableCell>
               <StyledTableHead>Phương thức thanh toán</StyledTableHead>
@@ -68,7 +68,7 @@ export default function OrderTable({
               <StyledTableHead>Ngày đặt hàng</StyledTableHead>
             </TableCell>
             <TableCell>
-              <StyledTableHead>Chi tiết</StyledTableHead>
+              <StyledTableHead>Chi tiết Đơn Hàng</StyledTableHead>
             </TableCell>
           </TableRow>
         </TableHead>
