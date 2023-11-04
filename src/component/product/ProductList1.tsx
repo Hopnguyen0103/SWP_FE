@@ -20,7 +20,12 @@ export default function ProductList1({ categoryAndProduct, number }: any) {
               <ProductCard product={product} />
             </Grid>
           ))}
-
+      </Grid>
+      <div style={{
+        marginTop: "2rem"
+        justifyContent: "space-around",
+        display: "flex",
+        }}>
         <StyledButton
           color="primary"
           variant="contained"
@@ -28,12 +33,6 @@ export default function ProductList1({ categoryAndProduct, number }: any) {
             router.push(`/category/${categoryAndProduct.categoryId}`);
           }}
         >
-          </Grid>
-      <div style={{
-        display: "flex",
-        justifyContent: "space-around",
-        marginTop: "1rem"
-      }}></div>
           Xem thêm
         </StyledButton>
       </div>
