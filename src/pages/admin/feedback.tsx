@@ -1,6 +1,5 @@
 import AdminLayout from '@/component/admin-component/AdminLayout'
 import React, { useEffect, useState } from 'react'
-import { Feedback } from '../../../package/model/feedback'
 import FeedbackTable from "@/component/admin-component/feedback/FeedbackTable";
 import { getFeedbackListApi } from "@/pages/api/feedback";
 import { useAppSelector } from "@/feature/Hooks";

@@ -1,7 +1,6 @@
 import AdminLayout from '@/component/admin-component/AdminLayout'
 import React, { useEffect, useState } from 'react'
 import { OrderAndOrderItem, OrderStatus } from '../../../package/model/order'
-import OrderTable from '@/component/admin-component/order/orderTable'
 import OrderTab from '@/component/order/OrderTab'
 export default function Order() {
   const [order, setOrder] = useState<OrderAndOrderItem[] | null>(null)

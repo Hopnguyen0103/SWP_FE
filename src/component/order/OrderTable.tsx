@@ -83,7 +83,7 @@ export default function OrderTable({
                   <TableCell align="center">{row.totalPayment} VND</TableCell>
                   <TableCell align="center">{row.payment.paymentType}</TableCell>
                   <TableCell align="center">
-                    <StyledLink href={`/order/detail/${row.orderId}`}>chi tiết</StyledLink>
+                    <StyledLink href={`/order/detail/${row.orderId}`}>Chi tiết</StyledLink>
                   </TableCell>
                 </TableRow>
               ))

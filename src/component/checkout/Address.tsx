@@ -35,16 +35,15 @@ export default function CheckoutAddress({
         >
           <div>
             <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
+            
             >
               <Typography
                 sx={{
+
                   padding: "0rem 1rem 0rem 1rem",
                   borderLeft: "1px solid gray",
                   color: "gray",
+
                 }}
               >
                 {userBackend.phoneNumber}
