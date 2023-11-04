@@ -180,7 +180,7 @@ const OrderViewTable = ({
               fontSize: "2rem",
             }}
           >
-            {formatNumber(total)}
+            {formatNumber(total)} VNĐ
           </span>
         </StyledText>
       </div>
