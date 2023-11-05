@@ -62,7 +62,7 @@ export default function ProductDetail({ product }: any) {
       <StyledTypography
         style={
           {
-            fontSize: "2rem",
+            fontSize: "3rem",
           }
         }
       >
@@ -70,11 +70,11 @@ export default function ProductDetail({ product }: any) {
       </StyledTypography>
       <div
         style={{
-          margin: "1rem 0rem",
+          margin: "2rem 1rem",
         }}
       >
         <StyledTypography variant="h6" sx={{
-          color: "#e10404",
+          color: "#e10405",
         }}>{formatNumber(product.price)} VND </StyledTypography>
         <StyledTypography
           variant="h6"
@@ -90,9 +90,10 @@ export default function ProductDetail({ product }: any) {
       <StyledTypography variant="body1" >{product.description}</StyledTypography>
       <div
         style={{
-          marginTop: "2rem",
           display: "flex",
           alignItems: "center",
+          marginTop: "3rem",
+
         }}
       >
         <StyledLoadingButton
