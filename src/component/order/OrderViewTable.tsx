@@ -177,7 +177,7 @@ const OrderViewTable = ({
               color: setup.border
               marginLeft: "5rem",
               fontWeight: "700",
-              fontSize: "2rem",
+              fontSize: "1rem",
             }}
           >
             {formatNumber(total)} VNĐ

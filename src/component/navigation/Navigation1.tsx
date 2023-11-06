@@ -68,7 +68,7 @@ const Navigation1 = () => {
           </div>
           <div
             style={{
-              marginTop: "1rem",
+              marginTop: "2rem",
             }}
           >
             <Grid container spacing={0}>

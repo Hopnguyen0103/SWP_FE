@@ -112,7 +112,7 @@ export default function ProductDetail({ product }: any) {
                   : setup.error,
             },
             backgroundColor: product.quantity > 0 ? setup.success : setup.error,
-            color: "white",
+            color: "black",
           }}
         >
           {product.quantity > 0 ? "Thêm vào giỏ hàng" : "Hết hàng"}
