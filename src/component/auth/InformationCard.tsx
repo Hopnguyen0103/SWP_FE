@@ -32,11 +32,11 @@ export default function InformationCard() {
     try {
       setIsLoading(true)
       const data: ResponseBody<User> = await UseRegister({
-        email: auth.currentUser?.email,
-        auth: auth.currentUser?.uid,
         address: `${fields.address}, ${address}`,
         phoneNumber: fields.phone,
         userName: fields.userName
+        email: auth.currentUser?.email,
+        auth: auth.currentUser?.uid,
       })
       dispatch(setOpen({
         open: true,
@@ -57,15 +57,15 @@ export default function InformationCard() {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <StyledOutlinedInput
-        label="Tên khách hàng"
         id="3"
+        label="Tên khách hàng""
         error={errors.userName !== undefined}
         helperText={errors.userName !== undefined ? "bắt buộc" : ""}
         {...register("userName", { required: true })}
       />
       <StyledOutlinedInput
-        label="Số điện thoại"
         id="4"
+        label="Số điện thoại"
         error={errors.phone !== undefined}
         helperText={errors.phone !== undefined ? "bắt buộc" : ""}
         {...register("phone", { required: true })}
