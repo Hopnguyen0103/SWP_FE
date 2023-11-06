@@ -107,7 +107,7 @@ export default function RegisterCard() {
             color: "#1818ad",
             textDecoration: "underline",
             display: "inline",
-            fontWeight: "600"
+            fontWeight: "700"
           }}
           href="/login"
         >
@@ -123,10 +123,10 @@ export default function RegisterCard() {
         <SocialButton handleLoginGoogle={handleLoginGoogle}/>
         <StyledLink
           style={{
-            fontSize: "0.9rem",
+            fontSize: "1rem",
             color: "#1818ad",
             textDecoration: "underline",
-            fontWeight: "600",
+            fontWeight: "700",
             textAlign: "center"
           }}
           href="/"

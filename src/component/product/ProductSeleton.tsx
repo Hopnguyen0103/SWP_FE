@@ -25,7 +25,7 @@ export default function ProductSkeleton() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            paddingTop: "0rem",
+            paddingTop: "1rem",
           }}
         >
           <Skeleton height={12} variant="rounded" width={120}/>

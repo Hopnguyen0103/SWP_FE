@@ -55,7 +55,7 @@ export default function FeedbackCreateForm({ productId, userId}: any ){
           <DialogContent>
             <div
               style={{
-                paddingTop: "1rem",
+                paddingTop: "2rem",
               }}
             >
               <Grid container spacing={0}>
@@ -69,7 +69,7 @@ export default function FeedbackCreateForm({ productId, userId}: any ){
                   <label htmlFor="nội dung" style={{marginLeft : "3.5rem"}}>Thêm đánh giá</label><br/>
                   <div style={{display : "flex", marginBottom : "1rem"}}>
                     <AccountCircleIcon color="primary" sx={{
-                      fontSize : "2.5rem", 
+                      fontSize : "2rem", 
                       margin : "-0.1em",
                       marginRight : "0.5em"
                     }}></AccountCircleIcon>

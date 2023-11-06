@@ -44,7 +44,7 @@ export default function ProductList2({ productList, row, col }: Props) {
         }}
         sx={{
           float: "right",
-          marginTop: "1rem",
+          marginTop: "2rem",
           "& .MuiButtonBase-root": {
             color: "red",
           },
