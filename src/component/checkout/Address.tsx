@@ -2,10 +2,10 @@ import { Paper, Typography, Box, Checkbox } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 
 export default function CheckoutAddress({
-  selectAddress,
-  setSelectAddress,
   addressList,
-  userBackend
+  userBackend,
+  selectAddress,
+  setSelectAddress
 }: any) {
   return (
     <Paper
@@ -35,27 +35,26 @@ export default function CheckoutAddress({
         >
           <div>
             <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
+            
             >
               <Typography
                 sx={{
-                  padding: "0rem 1rem 0rem 0rem",
-                  fontWeight: "700",
-                }}
-              >
-                {userBackend.userName}
-              </Typography>
-              <Typography
-                sx={{
+
                   padding: "0rem 1rem 0rem 1rem",
                   borderLeft: "1px solid gray",
                   color: "gray",
+
                 }}
               >
                 {userBackend.phoneNumber}
+              </Typography>
+              <Typography
+                sx={{
+                  padding: "0rem 1rem 0rem 0rem",
+                  fontWeight: "500",
+                }}
+              >
+                {userBackend.userName}
               </Typography>
             </div>
             <Typography

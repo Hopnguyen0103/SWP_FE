@@ -74,9 +74,9 @@ export default function CheckoutCartTable({
                   <CardMedia
                     component="img"
                     sx={{
+                      paddingRight: "1rem",
                       width: "5rem",
                       height: "4rem",
-                      paddingRight: "1rem",
                     }}
                     src={"/assets/images/" + row.product.image}
                   />
@@ -96,6 +96,11 @@ export default function CheckoutCartTable({
                 </Typography>
               </TableCell>
               <TableCell align="center">
+                <Typography>
+                  {formatNumber(row.product.price * row.quantity)} VND
+                </Typography>
+              </TableCell>
+              <TableCell align="center">
                 <Typography
                   variant="subtitle2"
                   sx={{
@@ -103,11 +108,6 @@ export default function CheckoutCartTable({
                   }}
                 >
                   {row.quantity}
-                </Typography>
-              </TableCell>
-              <TableCell align="center">
-                <Typography>
-                  {formatNumber(row.product.price * row.quantity)} VND
                 </Typography>
               </TableCell>
             </TableRow>

@@ -72,19 +72,19 @@ export default function ProductCard({product}: Props) {
     return (
       <Card
         sx={{
-          maxWidth: 360,
-          borderRadius: "1rem",
+          maxWidth: 380,
+          borderRadius: "2rem",
           // boxShadow: "none",
         }}
       >
         <UrlImage
-          height="16rem"
+          height="15rem"
           url={`/product/${product.productName}`}
           img={`/assets/images/${product.image}`}
         />
         <div
           style={{
-            padding: "1rem 1rem 0.5rem 1rem",
+            padding: "2rem 2rem 1rem 2rem",
           }}
         >
           <Typography
@@ -92,8 +92,8 @@ export default function ProductCard({product}: Props) {
             noWrap
             sx={{
               overflow: "hidden",
-              fontWeight: "600",
-              fontSize: "1.1rem",
+              fontWeight: "700",
+              fontSize: "1.2rem",
             }}
           >
             {product.productName}
@@ -115,7 +115,7 @@ export default function ProductCard({product}: Props) {
               variant="body1"
               sx={{
                 color: "#e10404",
-                fontWeight: 600,
+                fontWeight: 700,
               }}
             >
               {formatNumber(product.price)} VND

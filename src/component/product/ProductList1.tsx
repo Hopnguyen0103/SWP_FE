@@ -22,10 +22,10 @@ export default function ProductList1({ categoryAndProduct, number }: any) {
           ))}
       </Grid>
       <div style={{
-        display: "flex",
+        marginTop: "2rem"
         justifyContent: "space-around",
-        marginTop: "1rem"
-      }}>
+        display: "flex",
+        }}>
         <StyledButton
           color="primary"
           variant="contained"

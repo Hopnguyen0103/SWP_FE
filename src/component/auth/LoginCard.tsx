@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "./AuthContext";
-import { useForm } from "react-hook-form";
 import StyledLink from "../theme/navLink/Link";
 import StyledOutlinedInput from "../theme/input/StyledInput";
 import LineText from "../theme/text/LineText";
@@ -15,6 +14,7 @@ import { ggProvider } from './../../config/firebase';
 import { UseLoginGoogle } from "../../../package/function/auth/use-login-google";
 import SocialButton from "./SocialButton";
 import { StyledButton } from "../theme/button/StyledButton";
+import { useForm } from "react-hook-form";
 
 export default function LoginCard() {
   const router = useRouter()
@@ -34,15 +34,15 @@ export default function LoginCard() {
         auth: auth
       });
       dispatch(setOpen({
-        message: data.message,
         open: true,
         severity: data.status
+        message: data.message,
       }))
       data.data !== null ? router.push("/") : router.push("/information")
     } catch (error: any) {
       dispatch(setOpen({
-        message: error.message,
         open: true,
+        message: error.message,
         severity: "error"
       }))
     } finally {
@@ -66,8 +66,8 @@ export default function LoginCard() {
       }
     } catch (error: any) {
       dispatch(setOpen({
-        message: error.message,
         open: true,
+        message: error.message,
         severity: "error"
       }))
     } finally {
@@ -131,6 +131,7 @@ export default function LoginCard() {
         style={{
           marginTop: "1rem",
         }}
+        
       >
         <SocialButton handleLoginGoogle={handleLoginGoogle}/>
         <StyledLink
