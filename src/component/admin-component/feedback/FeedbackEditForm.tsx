@@ -80,10 +80,10 @@ export default function FeedbackEditForm({ feedback }: any) {
                   <label htmlFor="nội dung">* Nội dung góp ý</label>
                   <TextField
                     fullWidth
+                    id="nội dung"
                     type="text"
                     color="secondary"
                     size="small"
-                    id="nội dung"
                     defaultValue={feedback.content}
                     {...register("content", {
                       required: true,
