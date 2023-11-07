@@ -160,11 +160,11 @@ export default function FeedbackTable({ feedbackList }: {
                       }}
                     />
                   </TableCell>
-                  <TableCell>{row.feedbackId}</TableCell>
                   <TableCell>{row.user.userName}</TableCell>
+                  <TableCell>{row.feedbackId}</TableCell>
                   <TableCell>{row.product.productName}</TableCell>
-                  <TableCell align="justify" size="small" style={{ wordWrap: 'break-word' }}>{row.content}</TableCell>
                   <TableCell align="justify">{row.date}</TableCell>
+                  <TableCell align="justify" size="small" style={{ wordWrap: 'break-word' }}>{row.content}</TableCell>
                     {/*<FeedbackEditForm feedback={row}/>*/} 
                 </TableRow>
               ))}

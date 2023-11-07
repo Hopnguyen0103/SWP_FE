@@ -27,8 +27,8 @@ export default function FeedbackEditForm({ feedback }: any) {
       const response = await updateFeedbackApi(
         data.content,
         feedback.user,
-        feedback.product,
         feedback.date,
+        feedback.product,
         feedback.feedbackId
       );
       if (response) {
@@ -77,13 +77,13 @@ export default function FeedbackEditForm({ feedback }: any) {
                     marginBottom: "2rem",
                   }}
                 >
-                  <label htmlFor="nội dung">* Nội dung</label>
+                  <label htmlFor="nội dung">* Nội dung góp ý</label>
                   <TextField
                     fullWidth
+                    id="nội dung"
                     type="text"
                     color="secondary"
                     size="small"
-                    id="nội dung"
                     defaultValue={feedback.content}
                     {...register("content", {
                       required: true,
