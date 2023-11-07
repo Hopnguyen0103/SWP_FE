@@ -2,7 +2,7 @@ import { CardMedia, Dialog } from "@mui/material"
 import { useRouter } from "next/router"
 import { useState, useEffect } from "react"
 
-
+//loading 
 const Loading = () => {
     const router = useRouter()
   
