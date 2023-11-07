@@ -1,9 +1,9 @@
 import * as React from "react";
-
+import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
-
+import TabPanel from "@mui/lab/TabPanel";
 import styled from "@emotion/styled";
 import { Paper } from "@mui/material";
 import OrderTabItem from "./OrderTabItem";
@@ -31,8 +31,8 @@ export default function OrderTab({ orderStatusList, data }: {
           <TabList onChange={handleChange}>
             {orderStatusList.map((item: any, key: number) => (
               <StyledTab
-                label={item.status}
                 value={item.statusId.toString()}
+                label={item.status}
                 key={key}
               />
             ))}

@@ -50,6 +50,7 @@ export default function ProductList2({ productList, row, col }: Props) {
         sx={{
           marginTop: "2rem",
           float: "right",
+
           "& .MuiButtonBase-root": {
             color: "red",
           },
