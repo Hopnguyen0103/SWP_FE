@@ -27,7 +27,7 @@ export default function CheckoutCartTable({
               <Typography
                 variant="h5"
                 sx={{
-                  fontWeight: "700",
+                  fontWeight: "600",
                 }}
               >
                 Sản phẩm
@@ -37,14 +37,14 @@ export default function CheckoutCartTable({
               width={120}
               align="center"
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
             >
               Đơn giá
             </TableCell>
             <TableCell
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
               width={120}
               align="center"
@@ -54,7 +54,7 @@ export default function CheckoutCartTable({
             <TableCell
               align="center"
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
             >
               Thành tiền
@@ -76,7 +76,7 @@ export default function CheckoutCartTable({
                     sx={{
                       paddingRight: "1rem",
                       width: "5rem",
-                      height: "4rem",
+                      height: "5rem",
                     }}
                     src={"/assets/images/" + row.product.image}
                   />

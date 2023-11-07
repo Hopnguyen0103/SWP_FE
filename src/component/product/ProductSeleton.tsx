@@ -7,9 +7,7 @@ export default function ProductSkeleton() {
   return (
     <Card
       sx={{
-        maxWidth: 350,
-        borderRadius: "2rem",
-        // boxShadow: "none",
+
       }}
     >
       <Skeleton width="100%" height="16rem" />
@@ -26,6 +24,7 @@ export default function ProductSkeleton() {
             paddingTop: "1rem",
             display: "flex",
             alignItems: "center",
+
           }}
         >
           <Skeleton height={12} variant="rounded" width={120}/>

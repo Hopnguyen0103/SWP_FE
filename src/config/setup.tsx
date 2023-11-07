@@ -8,7 +8,7 @@ export const setup = {
   success: "rgb(46, 125, 50)",
   email: "cskg.kennybookstore@gmail.com",
   backgroundColor: "white",
-  address: "46/37C Nhiêu Tứ, Phường 07, Quận Phú Nhuận, Hồ Chí Minh"
+  address: "Tầng 5 tòa nhà The Nine số 9 Phạm Văn Đồng, Mai Dịch, Cầu Giấy, Hà Nội"
 };
 
 

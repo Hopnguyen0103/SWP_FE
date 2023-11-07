@@ -104,10 +104,12 @@ export default function OrderAdminTable({ order }: any) {
             <TableCell width={250}>
               <StyledTableHead>Phương thức thanh toán</StyledTableHead>
             </TableCell>
+
             <TableCell width={180}>
+
               <StyledTableHead>Tên khách hàng</StyledTableHead>
             </TableCell>
-            <TableCell width={120}>
+            <TableCell width={130}>
               <StyledTableHead>Tổng giá</StyledTableHead>
             </TableCell>
             <TableCell width={200}>
@@ -239,7 +241,7 @@ export default function OrderAdminTable({ order }: any) {
     </TableContainer>
   );
 }
-
+//orderstatus
 const status = [
   {
     statusId: 2,
