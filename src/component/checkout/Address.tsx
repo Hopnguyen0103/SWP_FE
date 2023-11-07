@@ -29,7 +29,7 @@ export default function CheckoutAddress({
             cursor: "pointer",
             display: "flex",
             alignItems: "center",
-            height: "68px",
+            height: "69px",
           }}
           key={key}
         >
@@ -51,7 +51,7 @@ export default function CheckoutAddress({
               <Typography
                 sx={{
                   padding: "0rem 1rem 0rem 0rem",
-                  fontWeight: "500",
+                  fontWeight: "600",
                 }}
               >
                 {userBackend.userName}

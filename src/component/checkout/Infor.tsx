@@ -80,7 +80,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "650",
+                        fontWeight: "600",
                         color: "gray",
                     }}
                 >
@@ -88,7 +88,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 </Typography>
                 <Typography
                     sx={{
-                        fontWeight: "650",
+                        fontWeight: "600",
                         color: "gray",
                     }}
                 >
@@ -107,7 +107,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "650",
+                        fontWeight: "600",
                         color: "white",
                     }}
                 >

@@ -32,7 +32,7 @@ export default function NavLeft() {
           <MenuItem
             sx={{
               fontWeight: "700",
-              color: "black",
+              color: "gray",
             }}
           >
             <ShoppingBagIcon
@@ -48,7 +48,7 @@ export default function NavLeft() {
           <MenuItem
             sx={{
               fontWeight: "700",
-              color: "black",
+              color: "gray",
             }}
           >
             <PersonIcon
