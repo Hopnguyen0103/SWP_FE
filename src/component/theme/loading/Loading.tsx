@@ -13,22 +13,22 @@ const Loading = () => {
         url !== router.asPath && setLoading(true)
       const handleComplete = () => setLoading(false)
   
-      router.events.on('routeChangeStart', handleStart)
-      router.events.on('routeChangeComplete', handleComplete)
       router.events.on('routeChangeError', handleComplete)
+       router.events.on('routeChangeStart', handleStart)
+      router.events.on('routeChangeComplete', handleComplete)
   
       return () => {
+        router.events.off('routeChangeError', handleComplete)
         router.events.off('routeChangeStart', handleStart)
         router.events.off('routeChangeComplete', handleComplete)
-        router.events.off('routeChangeError', handleComplete)
       }
     })
   
     return loading ? (
         <Dialog open={true} sx={{
           "& .MuiPaper-root" : {
-            backgroundColor: "rgba(0,0,0,0)",
             boxShadow: "none",
+            backgroundColor: "rgba(0,0,0,0)",
           }
         }}>
             <CardMedia
