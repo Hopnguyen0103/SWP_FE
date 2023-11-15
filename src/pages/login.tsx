@@ -6,8 +6,9 @@ import {
   DialogContent,
 } from "@mui/material";
 import React, { useState } from "react";
-import Head from "next/head";
 import LoginCard from "@/component/auth/LoginCard";
+import Head from "next/head";
+
 export default function Login() {
 
   return (

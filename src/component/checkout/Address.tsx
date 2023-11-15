@@ -40,9 +40,8 @@ export default function CheckoutAddress({
               <Typography
                 sx={{
 
-                  padding: "0rem 1rem 0rem 1rem",
-                  borderLeft: "1px solid gray",
-                  color: "gray",
+                  padding: "0rem 1rem 0rem 0rem",
+                  fontWeight: "500",
 
                 }}
               >
