@@ -21,9 +21,9 @@ export default function ProductListSkeleton({ row, col }: Props) {
   return (
     <Grid
       container
-      spacing={2}
+      spacing={3}
       sx={{
-        marginBottom: "1rem",
+        marginBottom: "2rem",
       }}
     >
       {skeletons}

@@ -36,10 +36,10 @@ export default function OrderAdminTable({ order }: any) {
     null
   );
   const router = useRouter()
+  const dispatch = useAppDispatch();
   const { setOpenLoading } = useContext(UserContext);
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [open, setOpenPopup] = useState<boolean>(false);
-  const dispatch = useAppDispatch();
   const handleChangePage = (
     event: React.MouseEvent<HTMLButtonElement> | null,
     newPage: number
@@ -106,9 +106,10 @@ export default function OrderAdminTable({ order }: any) {
             </TableCell>
 
             <TableCell width={180}>
+
               <StyledTableHead>Tên khách hàng</StyledTableHead>
             </TableCell>
-            <TableCell width={120}>
+            <TableCell width={130}>
               <StyledTableHead>Tổng giá</StyledTableHead>
             </TableCell>
             <TableCell width={200}>
@@ -136,10 +137,10 @@ export default function OrderAdminTable({ order }: any) {
                       )
                     )}
                   </TableCell>
-                  <TableCell>{row.payment.paymentType}</TableCell>
                   <TableCell>{row.user.userName}</TableCell>
-                  <TableCell>{row.totalPayment}</TableCell>
+                  <TableCell>{row.payment.paymentType}</TableCell>
                   <TableCell>{row.paymentDate}</TableCell>
+                  <TableCell>{row.totalPayment}</TableCell>
                   <TableCell>
                     <Button
                       variant="contained"
@@ -169,7 +170,7 @@ export default function OrderAdminTable({ order }: any) {
         >
           <DialogTitle>Cập nhật trạng thái</DialogTitle>
           <DialogContent>
-            {/* {status.map((item) => (
+            { {status.map((item) => (
               <MenuItem
                 sx={{
                   color: orderColor(item.statusId),
@@ -180,7 +181,7 @@ export default function OrderAdminTable({ order }: any) {
               >
                 {item.status}
               </MenuItem>
-            ))} */}
+            ))} }
             {selectOrder?.orderStatus.statusId === 1 ? (    
             <>          
             <MenuItem
@@ -233,14 +234,14 @@ export default function OrderAdminTable({ order }: any) {
         count={order !== undefined && order !== null ? order.length : 0}
         page={page}
         onPageChange={handleChangePage}
-        rowsPerPage={rowsPerPage}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        rowsPerPage={rowsPerPage}
         rowsPerPageOptions={[5, 10, 20]}
       />
     </TableContainer>
   );
 }
-
+//orderstatus
 const status = [
   {
     statusId: 2,
