@@ -56,19 +56,19 @@ export default function OrderTable({
         <TableHead>
           <TableRow>
             <TableCell>
-              <StyledTableHead>Mã</StyledTableHead>
-            </TableCell>
-            <TableCell>
-              <StyledTableHead>Ngày đặt hàng</StyledTableHead>
-            </TableCell>
-            <TableCell>
-              <StyledTableHead>Tổng giá</StyledTableHead>
+              <StyledTableHead>Mã Đơn Hàng</StyledTableHead>
             </TableCell>
             <TableCell>
               <StyledTableHead>Phương thức thanh toán</StyledTableHead>
             </TableCell>
             <TableCell>
-              <StyledTableHead>Chi tiết</StyledTableHead>
+              <StyledTableHead>Tổng giá</StyledTableHead>
+            </TableCell>
+            <TableCell>
+              <StyledTableHead>Ngày đặt hàng</StyledTableHead>
+            </TableCell>
+            <TableCell>
+              <StyledTableHead>Chi tiết Đơn Hàng</StyledTableHead>
             </TableCell>
           </TableRow>
         </TableHead>
@@ -78,12 +78,12 @@ export default function OrderTable({
               .slice(0 + page * rowsPerPage, (page + 1) * rowsPerPage)
               .map((row: OrderAndOrderItem) => (
                 <TableRow key={row.orderId}>
+                  <TableCell align="center">{row.totalPayment} VND</TableCell>
                   <TableCell align="center">{row.orderId}</TableCell>
                   <TableCell align="center">{row.orderDate}</TableCell>
-                  <TableCell align="center">{row.totalPayment} VND</TableCell>
                   <TableCell align="center">{row.payment.paymentType}</TableCell>
                   <TableCell align="center">
-                    <StyledLink href={`/order/detail/${row.orderId}`}>chi tiết</StyledLink>
+                    <StyledLink href={`/order/detail/${row.orderId}`}>Chi tiết Đơn Hàng</StyledLink>
                   </TableCell>
                 </TableRow>
               ))
@@ -96,9 +96,9 @@ export default function OrderTable({
         component="div"
         count={order !== undefined && order !== null ? order.length : 0}
         page={page}
+        onRowsPerPageChange={handleChangeRowsPerPage}
         onPageChange={handleChangePage}
         rowsPerPage={rowsPerPage}
-        onRowsPerPageChange={handleChangeRowsPerPage}
         rowsPerPageOptions={[5, 10, 20]}
       />
     </TableContainer>

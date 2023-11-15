@@ -1,13 +1,14 @@
 import { Product } from ".";
 
 export interface ProductAndCartItem {
-  cartItemId: number;
-  quantity: number;
-  product: Product;
+        quantity: number;
+        product: Product;
+        cartItemId: number;
+
 }
 
 export interface ProductAndOrderItem {
-  orderItemId: number;
-  quantity: number;
-  product: Product;
+        product: Product;
+        orderItemId: number;
+        quantity: number;
 }

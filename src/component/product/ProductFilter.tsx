@@ -38,13 +38,13 @@ export default function ProductFilter({
     <Paper>
       <div
         style={{
-          padding: "1rem",
+          padding: "2rem",
         }}
       >
         <Typography
           variant="h6"
           sx={{
-            fontWeight: "500",
+            fontWeight: "600",
           }}
         >
           Danh mục
@@ -69,13 +69,13 @@ export default function ProductFilter({
       </div>
       <div
         style={{
-          padding: "1rem",
+          padding: "2rem",
         }}
       >
         <Typography
           variant="h6"
           sx={{
-            fontWeight: "500",
+            fontWeight: "600",
           }}
         >
           Giá tiền
@@ -98,13 +98,13 @@ export default function ProductFilter({
       </div>
       <div
         style={{
-          padding: "1rem",
+          padding: "2rem",
         }}
       >
         <Typography
           variant="h6"
           sx={{
-            fontWeight: "500",
+            fontWeight: "600",
           }}
         >
           Trạng thái
@@ -116,7 +116,7 @@ export default function ProductFilter({
             key={item.statusId}
             sx={{
               width: "100%",
-              paddingLeft: "1rem",
+              paddingLeft: "2rem",
             }}
             value={statusNumber === item.statusId ? true : false}
             onChange={(_, value) => {

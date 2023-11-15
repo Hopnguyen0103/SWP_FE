@@ -31,8 +31,8 @@ export default function OrderTab({ orderStatusList, data }: {
           <TabList onChange={handleChange}>
             {orderStatusList.map((item: any, key: number) => (
               <StyledTab
-                label={item.status}
                 value={item.statusId.toString()}
+                label={item.status}
                 key={key}
               />
             ))}

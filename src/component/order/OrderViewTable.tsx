@@ -96,56 +96,56 @@ const OrderViewTable = ({
         <TableBody>
           {orderList !== undefined
             ? orderList.map((row: ProductAndOrderItem, index: any) => (
-                <TableRow
-                  key={index}
-                  sx={{
-                    ":hover": {
-                      backgroundColor: "#EDF1F5",
-                    },
-                  }}
-                >
-                  <TableCell>
-                    <CardMedia
-                      component="img"
-                      sx={{
-                        width: "6rem",
-                        height: "6rem",
-                      }}
-                      src={"/assets/images/" + row.product.image}
-                    />
-                  </TableCell>
-                  <TableCell>
-                    <Typography variant="body1">
-                      {row.product.productName}
-                    </Typography>
-                  </TableCell>
-                  <TableCell>
-                    <Typography
-                      variant="subtitle1"
-                      sx={{
-                        textAlign: "center",
-                      }}
-                    >
-                      {formatNumber(row.product.price)}
-                    </Typography>
-                  </TableCell>
-                  <TableCell align="center">
-                    <Typography
-                      variant="subtitle2"
-                      sx={{
-                        textAlign: "center",
-                      }}
-                    >
-                      {row.quantity}
-                    </Typography>
-                  </TableCell>
-                  <TableCell align="center">
-                    <Typography>
-                      {formatNumber(row.product.price * row.quantity)} VND
-                    </Typography>
-                  </TableCell>
-                </TableRow>
-              ))
+              <TableRow
+                key={index}
+                sx={{
+                  ":hover": {
+                    backgroundColor: "#EDF1F5",
+                  },
+                }}
+              >
+                <TableCell>
+                  <CardMedia
+                    component="img"
+                    sx={{
+                      width: "6rem",
+                      height: "6rem",
+                    }}
+                    src={"/assets/images/" + row.product.image}
+                  />
+                </TableCell>
+                <TableCell>
+                  <Typography variant="body1">
+                    {row.product.productName}
+                  </Typography>
+                </TableCell>
+                <TableCell>
+                  <Typography
+                    variant="subtitle1"
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {formatNumber(row.product.price)}
+                  </Typography>
+                </TableCell>
+                <TableCell align="center">
+                  <Typography
+                    variant="subtitle2"
+                    sx={{
+                      textAlign: "center",
+                    }}
+                  >
+                    {row.quantity}
+                  </Typography>
+                </TableCell>
+                <TableCell align="center">
+                  <Typography>
+                    {formatNumber(row.product.price * row.quantity)} VND
+                  </Typography>
+                </TableCell>
+              </TableRow>
+            ))
             : null}
         </TableBody>
       </Table>
@@ -173,14 +173,14 @@ const OrderViewTable = ({
           Tổng tiền:
           <span
             style={{
-              marginLeft: "5rem",
-              fontWeight: "700",
-              fontSize: "2rem",
               marginRight: "2.5rem",
               color: setup.border
+              marginLeft: "5rem",
+              fontWeight: "700",
+              fontSize: "1rem",
             }}
           >
-            {formatNumber(total)}
+            {formatNumber(total)} VNĐ
           </span>
         </StyledText>
       </div>

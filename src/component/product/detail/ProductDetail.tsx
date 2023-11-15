@@ -1,6 +1,5 @@
 import React, { useContext, useState } from "react";
 import { setup } from "@/config/setup";
-import LoadingButton from "@mui/lab/LoadingButton";
 import { setOpen } from "@/feature/Alert";
 import { useAppDispatch } from "@/feature/Hooks";
 import StyledLoadingButton from "@/component/theme/button/StyledLoadingButton";
@@ -14,16 +13,20 @@ const formatNumber = (number: number) => {
   return number.toLocaleString("en-US");
 };
 export default function ProductDetail({ product }: any) {
+
+  const dispatch = useAppDispatch();
   const [isLoading, setIsLoading] = React.useState<boolean>(false);
   const { cart } = React.useContext(UserContext)
-  const dispatch = useAppDispatch();
   const handleAddtoCart = async () => {
     if (auth.currentUser === null) {
       dispatch(
         setOpen({
-          open: true,
-          message: "You must login to buy",
           severity: "error",
+          open: true,
+
+          message: "Hãy đăng nhập để thêm vào giỏ hàng nhé!",
+          severity: "error",
+
         })
       );
     } else {
@@ -31,15 +34,15 @@ export default function ProductDetail({ product }: any) {
         setIsLoading(true)
 
         const response : ResponseBody<CartAndCartItemAndProduct> = await UseAddToCart({
+          auth: auth.currentUser?.uid
           productId: product?.productId,
           cartId: cart?.cart.cartId,
-          auth: auth.currentUser?.uid
         })
         dispatch(
           setOpen({
             open: true,
-            message: response.message,
             severity: response.status,
+            message: response.message,
           })
         );
       } catch (error: any) {
@@ -62,7 +65,7 @@ export default function ProductDetail({ product }: any) {
       <StyledTypography
         style={
           {
-            fontSize: "2rem",
+            fontSize: "3rem",
           }
         }
       >
@@ -70,11 +73,11 @@ export default function ProductDetail({ product }: any) {
       </StyledTypography>
       <div
         style={{
-          margin: "1rem 0rem",
+          margin: "2rem 1rem",
         }}
       >
         <StyledTypography variant="h6" sx={{
-          color: "#e10404",
+          color: "#e10405",
         }}>{formatNumber(product.price)} VND </StyledTypography>
         <StyledTypography
           variant="h6"
@@ -85,19 +88,20 @@ export default function ProductDetail({ product }: any) {
           Số lượng: {product.quantity}
         </StyledTypography>
       </div>
+      <StyledTypography variant="body1" >{product.description}</StyledTypography>
       <StyledTypography variant="body1" >Tình trạng: {product.status}</StyledTypography>
       <StyledTypography variant="body1" >Thông tin: </StyledTypography>
-      <StyledTypography variant="body1" >{product.description}</StyledTypography>
-      <div
+      </div
         style={{
-          marginTop: "2rem",
           display: "flex",
           alignItems: "center",
+          marginTop: "3rem",
+
         }}
       >
         <StyledLoadingButton
-          loading={isLoading}
           variant="contained"
+          loading={isLoading}
           disabled={product.quantity > 0 ? false : true}
           onClick={() => handleAddtoCart()}
           sx={{
@@ -108,10 +112,10 @@ export default function ProductDetail({ product }: any) {
                   : setup.error,
             },
             backgroundColor: product.quantity > 0 ? setup.success : setup.error,
-            color: "white",
+            color: "black",
           }}
         >
-          {product.quantity > 0 ? "Add to Cart " : "Out of Stock"}
+          {product.quantity > 0 ? "Thêm vào giỏ hàng" : "Hết hàng"}
         </StyledLoadingButton>
       </div>
     </>

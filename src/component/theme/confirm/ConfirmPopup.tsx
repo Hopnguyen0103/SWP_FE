@@ -14,7 +14,7 @@ export default function ConfirmPopup({
       onClose={() => {
       }}
     >
-      <DialogTitle>Confirm Delete</DialogTitle>
+      <DialogTitle>Bạn có chắc muốn xóa?</DialogTitle>
       <DialogContent
         sx={{
           display: "flex",
@@ -27,7 +27,7 @@ export default function ConfirmPopup({
             setOpenConfirmPopup(false)
           }}
         >
-          Cancel
+          Hủy
         </Button>
         <Button
           color="error"
@@ -36,7 +36,7 @@ export default function ConfirmPopup({
             setOpenConfirmPopup(false)
           }}
         >
-          Delete
+          Xác nhận
         </Button>
       </DialogContent>
     </Dialog>

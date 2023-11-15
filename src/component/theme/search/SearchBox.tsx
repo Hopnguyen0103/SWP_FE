@@ -48,15 +48,15 @@ export default function SearchBox() {
       <Autocomplete
         freeSolo
         inputValue={searchValue}
-        onInputChange={handleSearchChange}
         options={suggestions}
+        onInputChange={handleSearchChange}
         selectOnFocus
         renderInput={(params) => (
           <TextField
             {...params}
+            variant="outlined"
             size="small"
             id="search"
-            variant="outlined"
             value={searchValue}
             sx={{
               "& .MuiInputBase-root": {
@@ -64,8 +64,8 @@ export default function SearchBox() {
                 borderRadius: "1rem",
               },
               "& .MuiOutlinedInput-notchedOutline": {
-                border: "1px solid #3e5962",
                 borderRadius: "1rem",
+                border: "1px solid #3e5962",
               },
               "&:hover .MuiOutlinedInput-notchedOutline": {
                 border: "2px solid #3e5962 !important",

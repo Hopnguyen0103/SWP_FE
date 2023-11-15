@@ -17,7 +17,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 variant="h5"
                 sx={{
                     marginBottom: "1rem",
-                    fontWeight: "700",
+                    fontWeight: "650",
                 }}
             >
                 Thông tin đơn hàng
@@ -28,21 +28,22 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                     justifyContent: "space-between",
                 }}
             >
+               
                 <Typography
                     sx={{
-                        fontWeight: "600",
-                        color: "gray",
-                    }}
-                >
-                    Tạm tính{" "}
-                </Typography>
-                <Typography
-                    sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
                     {formatNumber(+total)} VND
+                </Typography>
+                <Typography
+                    sx={{
+                        fontWeight: "650",
+                        color: "gray",
+                    }}
+                >
+                    Tạm tính{" "}
                 </Typography>
             </div>
             <div
@@ -53,7 +54,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             >
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -61,7 +62,7 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
                 </Typography>
                 <Typography
                     sx={{
-                        fontWeight: "600",
+                        fontWeight: "650",
                         color: "gray",
                     }}
                 >
@@ -70,11 +71,11 @@ const CheckoutInfor = ({ total, selectAddress, selectPayment, cost }: { total: n
             </div>
             <div
                 style={{
-                    display: "flex",
-                    justifyContent: "space-between",
                     margin: "1rem 0rem 1rem",
                     paddingTop: "1rem",
                     borderTop: "1px solid gray",
+                    display: "flex",
+                    justifyContent: "space-between",
                 }}
             >
                 <Typography

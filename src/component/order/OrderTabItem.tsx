@@ -21,7 +21,7 @@ const OrderTabItem = ({
     <TabPanel
       value={value}
       sx={{
-        padding: "3rem 0rem",
+        padding: "4rem 0rem",
       }}
     >
       {router.asPath.indexOf("admin") === -1 ? <OrderTable order={filterOrder?.reverse()} /> : <OrderAdminTable order={filterOrder?.reverse()}/>}

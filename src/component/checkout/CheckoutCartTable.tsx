@@ -27,7 +27,7 @@ export default function CheckoutCartTable({
               <Typography
                 variant="h5"
                 sx={{
-                  fontWeight: "700",
+                  fontWeight: "600",
                 }}
               >
                 Sản phẩm
@@ -37,14 +37,14 @@ export default function CheckoutCartTable({
               width={120}
               align="center"
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
             >
               Đơn giá
             </TableCell>
             <TableCell
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
               width={120}
               align="center"
@@ -54,7 +54,7 @@ export default function CheckoutCartTable({
             <TableCell
               align="center"
               sx={{
-                fontWeight: "700",
+                fontWeight: "600",
               }}
             >
               Thành tiền
@@ -74,9 +74,9 @@ export default function CheckoutCartTable({
                   <CardMedia
                     component="img"
                     sx={{
-                      width: "5rem",
-                      height: "4rem",
                       paddingRight: "1rem",
+                      width: "5rem",
+                      height: "5rem",
                     }}
                     src={"/assets/images/" + row.product.image}
                   />
@@ -96,6 +96,11 @@ export default function CheckoutCartTable({
                 </Typography>
               </TableCell>
               <TableCell align="center">
+                <Typography>
+                  {formatNumber(row.product.price * row.quantity)} VND
+                </Typography>
+              </TableCell>
+              <TableCell align="center">
                 <Typography
                   variant="subtitle2"
                   sx={{
@@ -103,11 +108,6 @@ export default function CheckoutCartTable({
                   }}
                 >
                   {row.quantity}
-                </Typography>
-              </TableCell>
-              <TableCell align="center">
-                <Typography>
-                  {formatNumber(row.product.price * row.quantity)} VND
                 </Typography>
               </TableCell>
             </TableRow>

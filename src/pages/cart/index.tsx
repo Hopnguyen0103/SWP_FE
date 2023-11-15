@@ -141,7 +141,7 @@ export default function Cart() {
           <Typography variant="body1">
             Tổng tiền thanh toán:
             <span style={{ marginLeft: "1rem", marginRight: "5rem" }}>
-              {formatNumber(total)} VND
+              {formatNumber(total)} VNĐ
             </span>
           </Typography>
           <Button

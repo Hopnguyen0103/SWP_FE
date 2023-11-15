@@ -37,12 +37,12 @@ export default function NavigationLeft() {
           }}
           fullWidth
         >
-          {/* <CardGiftcardSharpIcon
+          { <CardGiftcardSharpIcon
           sx={{
             width: "2.5rem",
             height: "2.5rem",
           }}
-        /> */}
+        /> }
           {setup.name}
         </Button>
       </div>
